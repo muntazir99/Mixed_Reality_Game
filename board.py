@@ -48,7 +48,6 @@ def Contours(img):
 
     for idx, cnt in enumerate(contours):  # Iterate through each contour
         area = cv2.contourArea(cnt)
-        print(area)
         if 500 < area < 250000: 
 
             (x2,y2),radii = cv2.minEnclosingCircle(cnt)
@@ -68,16 +67,16 @@ def Contours(img):
 
     return imgContours, bboxs, centers, radius
 
-img = cv2.imread(r"C:\Users\Sahil Sahu\Desktop\Mixed_reality_game\resource\somethingnew.png")
+# img = cv2.imread(r"C:\Users\Sahil Sahu\Desktop\Mixed_reality_game\resource\somethingnew.png")
 
-# Detect objects, plot contours, and draw bounding boxes
-imgContours, bboxs = detect_board(img)
+# # Detect objects, plot contours, and draw bounding boxes
+# imgContours, bboxs = detect_board(img)
 
-# Display the image with contours and bounding boxes
-cv2.imshow("Board Detection", rescaling(imgContours, 0.5))
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# # Display the image with contours and bounding boxes
+# cv2.imshow("Board Detection", rescaling(imgContours, 0.5))
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
-# Print the detected bounding box coordinates
-for bbox in bboxs:
-    print("Bounding Box:", bbox)
+# # Print the detected bounding box coordinates
+# for bbox in bboxs:
+#     print("Bounding Box:", bbox)

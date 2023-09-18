@@ -9,7 +9,7 @@ def hit_detect():
     upper_bound = np.array([80,80,255])
 
 
-    cap = cv2.VideoCapture(0)   
+    cap = cv2.VideoCapture(1)   
     while True:
         ret, frame = cap.read()
 
@@ -19,7 +19,7 @@ def hit_detect():
 
         # Perform color thresholding to isolate the circle
         mask = cv2.inRange(frame, lower_bound, upper_bound)
-        
+
         contour_img, bounding_boxs, centers, radius = board.Contours(frame)
         if len(centers)<=2:
             continue
