@@ -19,14 +19,14 @@ pygame.display.set_caption("AIMING")
 score=0
 negscore=0
 
-pygame.mixer.music.load('/Users/muntazirjahangir/Downloads/ladyof80.mp3')
+pygame.mixer.music.load('resource/ladyof80.mp3')
 pygame.mixer.music.play()
 
 #initialise clock and fps
 fps=30
 clock=pygame.time.Clock()
 
-ball=pygame.image.load("/Users/muntazirjahangir/Downloads/circle.png").convert_alpha()
+ball=pygame.image.load("resource/circle.png").convert_alpha()
 ball=pygame.transform.smoothscale(ball,(256,160))
 ##rball=ball.get_rect()
 
@@ -59,7 +59,7 @@ while start:
                 window.blit(ball,(m-128,n-80))
                 print("HIT")
                 score+=1
-                pygame.mixer.music.load('/Users/muntazirjahangir/Downloads/punch-a-rock-161647.mp3')
+                pygame.mixer.music.load('resource/punch-a-rock-161647.mp3')
                 pygame.mixer.music.play()
                 #pygame.time.wait(3000)
                 m,n=rand()
