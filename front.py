@@ -25,15 +25,14 @@ pygame.display.set_caption("AIMING")
 score=0
 negscore=0
 
-# path = C:\Users\Sahil Sahu\Desktop\Mixed_reality_game\resource
-pygame.mixer.music.load(r'C:\Users\Sahil Sahu\Desktop\Mixed_reality_game\resource\ladyof80.mp3')
+pygame.mixer.music.load('resource/ladyof80.mp3')
 pygame.mixer.music.play()
 
 #initialise clock and fps
 fps=30
 clock=pygame.time.Clock()
 
-ball=pygame.image.load(r"C:\Users\Sahil Sahu\Desktop\Mixed_reality_game\resource\circle.png").convert_alpha()
+ball=pygame.image.load("resource/circle.png").convert_alpha()
 ball=pygame.transform.smoothscale(ball,(256,160))
 ##rball=ball.get_rect()
 
@@ -59,6 +58,7 @@ while start:
     pygame.draw.circle(window,(255,0,0),(m,n),80)
 
 
+  
     # if event.type==pygame.MOUSEBUTTONDOWN:
     #     if event.button==1:
     #         if (event.pos[0]-m)**2+(event.pos[1]-n)**2<=80**2:
