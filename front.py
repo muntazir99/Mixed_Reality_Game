@@ -30,7 +30,7 @@ ball=pygame.image.load("resource/circle.png").convert_alpha()
 ball=pygame.transform.smoothscale(ball,(256,160))
 ##rball=ball.get_rect()
 
-img= pygame.image.load("resource/scene.jpg").convert()
+img= pygame.image.load("resource/Background.png").convert()
 img=pygame.transform.scale(img,(1080,800))
 m,n=rand()
 #main loop
@@ -53,7 +53,7 @@ while start:
 
     x=input()
     if x=='hit':
-        pygame.draw.circle(window,(0,255,0),(m,n),80)
+        pygame.draw.circle(window,(255,0,0),(m,n),80)
         window.blit(ball,(m-128,n-80))
         print("HIT")
         score+=1
@@ -61,11 +61,12 @@ while start:
         pygame.mixer.music.play()
         #pygame.time.wait(3000)
         m,n=rand()
+        pygame.draw.circle(window,(255,0,0),(m,n),80)
     else:
-        pygame.draw.circle(window,(255,0,255),(m,n),80)
+        pygame.draw.circle(window,(255,0,0),(m,n),80)
         print("MISS")
         negscore+=1
-        m,n=rand()
+        #m,n=rand()
     # if event.type==pygame.MOUSEBUTTONDOWN:
     #     if event.button==1:
     #         if (event.pos[0]-m)**2+(event.pos[1]-n)**2<=80**2:
